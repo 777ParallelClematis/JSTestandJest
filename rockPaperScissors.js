@@ -3,10 +3,14 @@ var readlineSync = require('readline-sync')
 // function for computer to choose randomly rock, paper or scissors
 
 let options = ["rock", "paper", "scissors"]
-let computerChoiceResult = null
+let computerChoiceResult = 0
+
+let minCeiled = null
+let maxFloored = null
+
 function computerChoice(min, max){
-   let minCeiled = Math.floor(0)
-   let maxFloored = Math.ceil(3)
+   minCeiled = Math.floor(0)
+   maxFloored = Math.ceil(3)
    let computerChoiceResult = Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled)
 }console.log(computerChoiceResult)
 
